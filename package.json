@@ -2,7 +2,7 @@
   "name": "general-autotag",
   "version": "1.0.0",
   "description": "Automatically generate new tags by extracting their names from a given source file",
-  "main": "main.js",
+  "main": "main.cjs",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jaliborc/action-general-autotag.git"

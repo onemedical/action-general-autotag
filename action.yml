@@ -5,6 +5,9 @@ branding:
   icon: 'tag'
   color: 'orange'
 inputs:
+  GITHUB_TOKEN:
+    description: Pass in the GITHUB_TOKEN which GitHub automatically created as a secret to use in your workflow.
+    required: true
   source_file:
     description: This is the file the action will look for the current tag name in.
   extraction_regex:
@@ -29,4 +32,4 @@ outputs:
     description: The version, as defined in the source file.
 runs:
   using: 'node12'
-  main: 'main.js'
+  main: 'main.cjs'
