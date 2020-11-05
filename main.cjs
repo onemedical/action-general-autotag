@@ -64,11 +64,11 @@ async function run() {
 
     core.debug('Making tag...')
     let tag = await git.git.createTag({owner, repo, tag: name, message: message.length > 0 ? message : 'Initial tag', object: process.env.GITHUB_SHA, type: 'commit'})
-    core.info(`Created tag ${tag.data.sha}`)
+    core.warning(`Created tag ${tag.data.sha}`)
 
     core.debug('Making reference...')
     let reference = await git.git.createRef({owner, repo, ref: `refs/tags/${tag.data.tag}`, sha: tag.data.sha})
-    core.info(`Reference ${reference.data.ref} available at ${reference.data.url}`)
+    core.warning(`Reference ${reference.data.ref} available at ${reference.data.url}`)
 
     if (typeof tag === 'object' && typeof reference === 'object') {
       core.setOutput('tagsha', tag.data.sha)
