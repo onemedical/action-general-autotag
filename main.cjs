@@ -45,7 +45,7 @@ async function run() {
 
       if (message.length === 0 && tags.data.length > 0) {
         let latest = tags.data.shift()
-        let changelog = await git.repos.compareCommits({owner, repo, base: latest.name, head: 'master'})
+        let changelog = await git.repos.compareCommits({owner, repo, base: latest.name, head: 'main'})
 
         message = '\n'
 
