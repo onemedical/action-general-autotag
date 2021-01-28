@@ -1,6 +1,6 @@
 {
   "name": "general-autotag",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Automatically generate new tags by extracting their names from a given source file",
   "main": "main.cjs",
   "repository": {
@@ -18,6 +18,6 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.2.6",
-    "@actions/github": "^1.0.0"
+    "@actions/github": "^1.0.1"
   }
 }
